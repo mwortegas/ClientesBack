@@ -9,7 +9,8 @@ get http://localhot:8090/comohogar/api/cli/calban@ool.com             # Obtiene 
 
 delete http://localhot:8090/comohogar/api/cli/delete/calban@ool.com   # Borrará el registro del cliente Carlos Albán.
 
-post   http://localhot:8090/comohogar/api/cli/save                    # Guardara informacion del cliente Carlos Albán.
+# Guardara informacion del cliente Carlos Albán.
+post   http://localhot:8090/comohogar/api/cli/save                    
 "Media-Type": "application/json"
 {
    "name": "Carlos Alban",
@@ -20,8 +21,8 @@ post   http://localhot:8090/comohogar/api/cli/save                    # Guardara
    "edit": "",
    "delete": ""
 }
-
-post   http://localhot:8090/comohogar/api/cli/save                   Guardará informacion del cliente Marco Botton.
+# Guardará informacion del cliente Marco Botton.
+post   http://localhot:8090/comohogar/api/cli/save                   
 "Media-Type": "application/json"
 {
    "name": "Carlos Alban",
