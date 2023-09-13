@@ -16,8 +16,8 @@ public class DSkFormatoController {
     public List<SkFormato> getAll(){
         ObjectMapper objectMapper = new ObjectMapper();
         try {
-            List<SkFormato> beneficios = objectMapper.readValue(new File("src/Referencias/sk_formato.json"), new TypeReference<List<SkFormato>>() {
-            });
+            List<SkFormato> beneficios =  objectMapper.readValue(new File("src/Referencias/sk_formato.json"),
+                    new TypeReference<List<SkFormato>>() {});
             return beneficios;
         }catch (IOException ex){
             System.out.println(ex.getMessage());
@@ -29,7 +29,10 @@ public class DSkFormatoController {
     public SkFormato grabar(@RequestBody SkFormato skFormato) {
         ObjectMapper objectMapper = new ObjectMapper();
         try {
-            objectMapper.writeValue(new File("src/Referencias/sk_formato.json"), skFormato);
+            List<SkFormato> beneficios =  objectMapper.readValue(new File("src/Referencias/sk_formato.json"),
+                    new TypeReference<List<SkFormato>>() {});
+            beneficios.add(skFormato);
+            objectMapper.writeValue(new File("src/Referencias/sk_formato.json"), beneficios);
         }catch (IOException ex) {
             System.out.println(ex.getMessage());
             return null;
